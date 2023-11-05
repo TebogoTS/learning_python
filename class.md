@@ -70,6 +70,36 @@ your_car = Car('green', 'Beetle')
 
 `your_car` is a different instance of the `Car` class with its own unique attributes.
 
+### Putting it all together:
+In Python, the convention for naming files (modules) is to use all lowercase letters and underscores to separate words if needed. The class file should be named in a way that describes its contents. 
+
+For instance, if you have a class named `Car`, you would typically put it in a file named `car.py`. Here’s how you might organize it:
+
+**Filename**: `car.py`
+```python
+# This is the content of car.py
+
+class Car:
+    def __init__(self, color, model):
+        self.color = color
+        self.model = model
+
+    def drive(self):
+        print(f"The {self.color} {self.model} is now driving.")
+```
+
+To use the `Car` class in another file, you would import it using the filename (without the `.py` extension):
+
+**Filename**: `main.py`
+```python
+from car import Car
+
+my_car = Car('red', 'Mustang')
+my_car.drive()
+```
+
+By keeping to this convention, the code becomes predictable and easily understandable to other Python developers.
+
 In summary:
 
 - **Class**: A blueprint containing attributes and methods.
@@ -80,3 +110,4 @@ In summary:
 - **Instance**: A unique object created from a class, with its own attributes and methods.
 
 Each of these elements plays a crucial role in organizing code in an object-oriented way, making it reusable and manageable.
+
